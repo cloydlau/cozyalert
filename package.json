@@ -1,5 +1,6 @@
 {
   "name": "cozyalert",
+  "description": "Cozy presets for sweetalert2",
   "author": "cloydlau",
   "version": "0.0.1",
   "private": false,
