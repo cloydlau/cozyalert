@@ -1,0 +1,39 @@
+{
+  "name": "cozyalert",
+  "author": "cloydlau",
+  "version": "0.0.1",
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cloydlau/cozyalert"
+  },
+  "main": "./dist/cozyalert.umd.js",
+  "module": "./dist/cozyalert.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/cozyalert.es.js",
+      "require": "./dist/cozyalert.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "c": "rd /s /q .\\node_modules",
+    "ri": "npm run clean && pnpm i",
+    "u": "node scripts/upgrade.js",
+    "r": "node scripts/release.js",
+    "rs": "node scripts/release.js --straightforward"
+  },
+  "dependencies": {
+    "sweetalert2": "latest"
+  },
+  "devDependencies": {
+    "typescript": "latest",
+    "vite": "latest"
+  },
+  "files": [
+    "dist"
+  ]
+}
