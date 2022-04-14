@@ -22,7 +22,7 @@
     "dev": "vite",
     "build": "vite build",
     "c": "rd /s /q .\\node_modules",
-    "ri": "npm run clean && pnpm i",
+    "ri": "npm run c && pnpm i",
     "u": "node scripts/upgrade.js",
     "r": "node scripts/release.js",
     "rs": "node scripts/release.js --straightforward"
