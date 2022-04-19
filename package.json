@@ -21,7 +21,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "c": "rd /s /q .\\node_modules",
+    "clean": "rd /s /q .\\node_modules",
     "ri": "npm run clean && pnpm i",
     "u": "node scripts/upgrade.js",
     "r": "node scripts/release.js",
