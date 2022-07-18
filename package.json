@@ -10,10 +10,10 @@
     "url": "https://github.com/cloydlau/cozyalert"
   },
   "main": "./dist/cozyalert.umd.js",
-  "module": "./dist/cozyalert.es.js",
+  "module": "./dist/cozyalert.mjs",
   "exports": {
     ".": {
-      "import": "./dist/cozyalert.es.js",
+      "import": "./dist/cozyalert.mjs",
       "require": "./dist/cozyalert.umd.js"
     },
     "./dist/style.css": "./dist/style.css"
