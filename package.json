@@ -28,8 +28,7 @@
     "ri": "npm run clean && pnpm i",
     "u": "node scripts/upgrade.js",
     "r": "node scripts/release.js",
-    "rs": "node scripts/release.js --straightforward",
-    "prepare": "husky install"
+    "rs": "node scripts/release.js --straightforward"
   },
   "dependencies": {
     "sweetalert2": "latest"
@@ -40,6 +39,7 @@
     "enquirer": "latest",
     "eslint": "latest",
     "execa": "^4.1.0",
+    "husky": "latest",
     "lint-staged": "latest",
     "minimist": "latest",
     "semver": "latest",
