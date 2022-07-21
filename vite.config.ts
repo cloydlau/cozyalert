@@ -6,7 +6,7 @@ export default {
   build: {
     lib: {
       name,
-      entry: 'src/main.ts'
+      entry: 'src/index.ts'
     },
   }
 }

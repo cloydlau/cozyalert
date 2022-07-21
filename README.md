@@ -50,7 +50,7 @@ this.$swal.confirm('确认吗？')
 
 ```ts
 import 'cozyalert/dist/style.css'
-import { success, info, warning, error, confirm } from 'cozyalert'
+import { confirm, error, info, success, warning } from 'cozyalert'
 
 success('操作成功')
 info('提示')
@@ -108,12 +108,13 @@ error('出错了').then(() => {
   // 关闭
 })
 
-confirm('确认吗？').then(e => {
+confirm('确认吗？').then((e) => {
   // 点击确认
-}).catch(e => {
+}).catch((e) => {
   if (e.isDenied) {
     // 点击拒绝
-  } else if (e.isDismissed) {
+  }
+  else if (e.isDismissed) {
     // 点击取消
   }
 })
@@ -148,43 +149,45 @@ confirm({
   inputAttributes: {
     placeholder: '备注'
   },
-  confirmButtonText: `同意`,
+  confirmButtonText: '同意',
   showLoaderOnConfirm: true,
-  preConfirm: input => {
-    return new Promise(resolve => {
+  preConfirm: (input) => {
+    return new Promise((resolve) => {
       setTimeout(resolve, 500)
     }).then(() => {
       alert('同意成功')
-    }).catch(e => {
+    }).catch((e) => {
       alert('同意失败')
     })
   },
   // 拒绝按钮
   showDenyButton: true,
-  denyButtonText: `拒绝`,
+  denyButtonText: '拒绝',
   returnInputValueOnDeny: true,
-  preDeny: input => {
+  preDeny: (input) => {
     if (input) {
       return new Promise((resolve, reject) => {
         setTimeout(reject, 500)
       }).then(() => {
         alert('拒绝成功')
-      }).catch(e => {
+      }).catch((e) => {
         alert('拒绝失败')
       })
-    } else {
-      this.$swal.showValidationMessage(`请填写备注`)
+    }
+    else {
+      this.$swal.showValidationMessage('请填写备注')
       return false
     }
   },
-}).then(e => {
+}).then((e) => {
   alert('同意')
-}).catch(e => {
-  if (e.isDenied) {
+}).catch((e) => {
+  if (e.isDenied)
     alert('拒绝')
-  } else if (e.isDismissed) {
+
+  else if (e.isDismissed)
     alert('取消')
-  }
+
 })
 ```
 
